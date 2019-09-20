@@ -38,31 +38,31 @@ int main()
 		if (withdraw >= 1 & withdraw <= 300)//count # of bills if withdrawl is within the range of 1 and 300
 		{
 			i50 = withdraw / 50;
-			if (i50 > 0)
+			if (i50 > 0)//if i50 is greater than 1 display $50.00 bills
 			{
 				cout << "You have " << i50 << " " << "$50.00 bills " << endl;
 				withdraw -= i50 * 50;
 			}
 			i20 = withdraw / 20;
-			if (i20 > 0)
+			if (i20 > 0)//if i20 is greater than 1 display $20.00 bills
 			{
 				cout << "You have " << i20 << " " << "$20.00 bills " << endl;
 				withdraw -= i20 * 20;
 			}
 			i10 = withdraw / 10;
-			if (i10 > 0)
+			if (i10 > 0)//if i10 is greater than 1 display $10.00 bills
 			{
 				cout << "You have " << i10 << " " << "$10.00 bills " << endl;
 				withdraw -= i10 * 10;
 			}
 			i5 = withdraw / 5;
-			if (i5 > 0)
+			if (i5 > 0)//if i5 is greater than 1 display $5.00 bills
 			{
 				cout << "You have " << i5 << " " << "$5.00 bills " << endl;
 				withdraw -= i5 * 5;
 			}
 			i1 = withdraw / 1;
-			if (i1 > 0)
+			if (i1 > 0)//if i1 is greater than 1 display $1.00 bills
 			{
 				cout << "You have " << i1 << " " << "$1.00 bills " << endl;
 				withdraw -= i1 * 1;
