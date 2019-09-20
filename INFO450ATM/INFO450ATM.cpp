@@ -38,22 +38,42 @@ int main()
 		if (withdraw >= 1 & withdraw <= 300)//count # of bills if withdrawl is within the range of 1 and 300
 		{
 			i50 = withdraw / 50;
-			cout << "You have " << i50 <<" "<< "$50.00 bills " << endl;
+			if (i50 > 0)
+			{
+				cout << "You have " << i50 << " " << "$50.00 bills " << endl;
+				withdraw -= i50 * 50;
+			}
 			i20 = withdraw / 20;
-			cout << "You have " << i20 <<" "<< "$20.00 bills " << endl;
+			if (i20 > 0)
+			{
+				cout << "You have " << i20 << " " << "$20.00 bills " << endl;
+				withdraw -= i20 * 20;
+			}
 			i10 = withdraw / 10;
-			cout << "You have " << i10 <<" "<< "$10.00 bills " << endl;
+			if (i10 > 0)
+			{
+				cout << "You have " << i10 << " " << "$10.00 bills " << endl;
+				withdraw -= i10 * 10;
+			}
 			i5 = withdraw / 5;
-			cout << "You have " << i5 <<" "<< "$5.00 bills " << endl;
+			if (i5 > 0)
+			{
+				cout << "You have " << i5 << " " << "$5.00 bills " << endl;
+				withdraw -= i5 * 5;
+			}
 			i1 = withdraw / 1;
-			cout << "You have " << i1 <<" "<< "$1.00 bills " << endl;
+			if (i1 > 0)
+			{
+				cout << "You have " << i1 << " " << "$1.00 bills " << endl;
+				withdraw -= i1 * 1;
+			}
 		}
 		cout << "Another?  type Y to continue " << endl;//ask for additional withdrawl if previous withdrawl was valid
 		cin >> answer;
 		break;
 		cout << "Please enter a withdrawl amount " << endl;
 		cin >> withdraw;
-	} while (answer == 'y');
+	} while (answer == 'y' || answer =='Y');
 	
 	return 0;
 }
